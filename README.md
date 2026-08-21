@@ -84,6 +84,16 @@ dotnet run --project src\SonoSonnette.App
    lancement (« Informations complémentaires » → « Exécuter quand même »). Pour l'éviter, il faudrait signer
    l'exécutable avec un certificat de signature de code.
 
+## Thème et logo
+
+L'interface utilise un thème sombre (fond quasi noir) avec un accent violet→cyan repris du logo **JAS Digital
+Works**. Le pied de fenêtre affiche « Développé par » suivi d'une reconstitution vectorielle du logo (hexagone en
+dégradé violet/cyan) : je n'ai pas pu récupérer le fichier image d'origine collé dans la conversation (aucun accès
+disque à cette pièce jointe depuis cet environnement), donc la marque a été recréée à la main en XAML plutôt que
+d'être intégrée telle quelle. Pour un rendu identique au fichier original, fournissez le logo en `.png` ou `.svg`
+(par ex. dans `src/SonoSonnette.App/Assets/logo.png`) et remplacez le bloc `Viewbox`/`Polygon` du pied de page dans
+`MainWindow.axaml` par une simple `<Image Source="/Assets/logo.png" />`.
+
 ## Limites connues / pistes d'amélioration
 
 - Le mot de passe se réinitialise (redemande de déverrouillage) à chaque redémarrage de l'application ; il n'y a

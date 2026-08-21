@@ -29,6 +29,40 @@
       </StackPanel>
     </DockPanel>
 
+    <Border DockPanel.Dock="Bottom"
+            BorderThickness="0,1,0,0"
+            BorderBrush="#1FFFFFFF"
+            Margin="0,12,0,0"
+            Padding="0,10,0,0">
+      <StackPanel Orientation="Horizontal" Spacing="8" HorizontalAlignment="Center">
+        <TextBlock Text="Développé par" Foreground="#99FFFFFF" FontSize="12" VerticalAlignment="Center" />
+
+        <Viewbox Width="20" Height="20" VerticalAlignment="Center">
+          <Canvas Width="40" Height="40">
+            <Polygon Points="38,20 29,4.4 11,4.4 2,20 11,35.6 29,35.6">
+              <Polygon.Fill>
+                <LinearGradientBrush StartPoint="0%,0%" EndPoint="100%,100%">
+                  <GradientStop Color="#7B2FF7" Offset="0" />
+                  <GradientStop Color="#1CC8FF" Offset="1" />
+                </LinearGradientBrush>
+              </Polygon.Fill>
+            </Polygon>
+            <TextBlock Text="S" FontWeight="Bold" FontSize="20" Foreground="White"
+                       Canvas.Left="13" Canvas.Top="8" />
+          </Canvas>
+        </Viewbox>
+
+        <TextBlock Text="JAS Digital Works" FontSize="12" FontWeight="SemiBold" VerticalAlignment="Center">
+          <TextBlock.Foreground>
+            <LinearGradientBrush StartPoint="0%,0%" EndPoint="100%,0%">
+              <GradientStop Color="#9B5CFA" Offset="0" />
+              <GradientStop Color="#1CC8FF" Offset="1" />
+            </LinearGradientBrush>
+          </TextBlock.Foreground>
+        </TextBlock>
+      </StackPanel>
+    </Border>
+
     <TextBlock DockPanel.Dock="Bottom" x:Name="StatusBar" Opacity="0.7" Margin="0,10,0,0" />
 
     <ListBox x:Name="ScheduleList">

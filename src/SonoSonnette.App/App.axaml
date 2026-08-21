@@ -1,10 +1,32 @@
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="SonoSonnette.App.App"
-             RequestedThemeVariant="Default">
+             RequestedThemeVariant="Dark">
+
+  <Application.Resources>
+    <!-- Palette dérivée du logo JAS Digital Works (dégradé violet -> cyan). -->
+    <Color x:Key="SystemAccentColor">#7B2FF7</Color>
+    <Color x:Key="SystemAccentColorDark1">#5B1FC2</Color>
+    <Color x:Key="SystemAccentColorDark2">#3E1594</Color>
+    <Color x:Key="SystemAccentColorDark3">#2A0E6E</Color>
+    <Color x:Key="SystemAccentColorLight1">#9B5CFA</Color>
+    <Color x:Key="SystemAccentColorLight2">#C9A6FF</Color>
+    <Color x:Key="SystemAccentColorLight3">#E4D4FF</Color>
+
+    <Color x:Key="BrandPurple">#7B2FF7</Color>
+    <Color x:Key="BrandCyan">#1CC8FF</Color>
+    <LinearGradientBrush x:Key="BrandGradientBrush" StartPoint="0%,0%" EndPoint="100%,100%">
+      <GradientStop Color="{StaticResource BrandPurple}" Offset="0" />
+      <GradientStop Color="{StaticResource BrandCyan}" Offset="1" />
+    </LinearGradientBrush>
+  </Application.Resources>
 
   <Application.Styles>
     <FluentTheme />
+
+    <Style Selector="Window">
+      <Setter Property="Background" Value="#0A0A0D" />
+    </Style>
   </Application.Styles>
 
   <TrayIcon.Icons>
