@@ -1,0 +1,43 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="SonoSonnette.App.Dialogs.ScheduleEditWindow"
+        Title="Planning"
+        Width="420"
+        SizeToContent="Height"
+        WindowStartupLocation="CenterOwner"
+        CanResize="False">
+  <StackPanel Margin="20" Spacing="12">
+
+    <TextBlock Text="Nom" FontWeight="SemiBold" />
+    <TextBox x:Name="NameBox" Watermark="ex : Sonnerie de midi" />
+
+    <TextBlock Text="Fichier audio" FontWeight="SemiBold" />
+    <DockPanel>
+      <Button DockPanel.Dock="Right" Content="Parcourir…" Click="OnBrowseClicked" Margin="8,0,0,0" />
+      <TextBox x:Name="FilePathBox" IsReadOnly="True" Watermark="Aucun fichier sélectionné" />
+    </DockPanel>
+
+    <TextBlock Text="Heure de déclenchement" FontWeight="SemiBold" />
+    <TimePicker x:Name="TimeBox" ClockIdentifier="24HourClock" />
+
+    <TextBlock Text="Jours actifs" FontWeight="SemiBold" />
+    <WrapPanel>
+      <CheckBox x:Name="MondayBox" Content="Lun" Margin="0,0,10,0" />
+      <CheckBox x:Name="TuesdayBox" Content="Mar" Margin="0,0,10,0" />
+      <CheckBox x:Name="WednesdayBox" Content="Mer" Margin="0,0,10,0" />
+      <CheckBox x:Name="ThursdayBox" Content="Jeu" Margin="0,0,10,0" />
+      <CheckBox x:Name="FridayBox" Content="Ven" Margin="0,0,10,0" />
+      <CheckBox x:Name="SaturdayBox" Content="Sam" Margin="0,0,10,0" />
+      <CheckBox x:Name="SundayBox" Content="Dim" />
+    </WrapPanel>
+
+    <CheckBox x:Name="EnabledBox" Content="Planning activé" />
+
+    <TextBlock x:Name="ErrorText" Foreground="Red" IsVisible="False" TextWrapping="Wrap" />
+
+    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Spacing="8">
+      <Button Content="Annuler" Click="OnCancelClicked" />
+      <Button Content="Enregistrer" Click="OnSaveClicked" IsDefault="True" />
+    </StackPanel>
+  </StackPanel>
+</Window>

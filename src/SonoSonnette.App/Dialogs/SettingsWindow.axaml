@@ -1,0 +1,35 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="SonoSonnette.App.Dialogs.SettingsWindow"
+        Title="Paramètres"
+        Width="420"
+        SizeToContent="Height"
+        WindowStartupLocation="CenterOwner"
+        CanResize="False">
+  <StackPanel Margin="20" Spacing="14">
+
+    <TextBlock Text="Sortie audio" FontWeight="SemiBold" />
+    <ComboBox x:Name="OutputDeviceCombo" HorizontalAlignment="Stretch" />
+    <TextBlock Text="Choisissez si le son doit sortir par les haut-parleurs de l'ordinateur ou par la sortie Jack / casque de la carte son."
+               TextWrapping="Wrap" Opacity="0.7" FontSize="12" />
+
+    <TextBlock Text="Volume" FontWeight="SemiBold" />
+    <Slider x:Name="VolumeSlider" Minimum="0" Maximum="1" />
+
+    <Button Content="Tester le son" Click="OnTestSoundClicked" HorizontalAlignment="Left" />
+
+    <Separator Margin="0,4" />
+
+    <CheckBox x:Name="AutoStartBox" Content="Démarrer automatiquement avec Windows" />
+
+    <Separator Margin="0,4" />
+
+    <Button Content="Changer le mot de passe…" Click="OnChangePasswordClicked" HorizontalAlignment="Left" />
+
+    <TextBlock x:Name="StatusText" Foreground="Green" IsVisible="False" TextWrapping="Wrap" />
+
+    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Spacing="8">
+      <Button Content="Fermer" Click="OnCloseClicked" IsDefault="True" />
+    </StackPanel>
+  </StackPanel>
+</Window>

@@ -1,0 +1,48 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="SonoSonnette.App.MainWindow"
+        Title="Sono-Sonnette"
+        Width="680" Height="480"
+        MinWidth="520" MinHeight="360"
+        Icon="/Assets/tray-icon.ico">
+  <DockPanel Margin="16">
+
+    <DockPanel DockPanel.Dock="Top" Margin="0,0,0,12">
+      <Button x:Name="OnAirButton"
+              DockPanel.Dock="Right"
+              Content="ON AIR"
+              FontWeight="Bold"
+              FontSize="16"
+              Foreground="White"
+              Background="#C62828"
+              Padding="20,10"
+              CornerRadius="6"
+              PointerPressed="OnAirPressed"
+              PointerReleased="OnAirReleased"
+              PointerCaptureLost="OnAirCaptureLost"
+              ToolTip.Tip="Maintenez appuyé pour diffuser le micro en direct vers la sortie audio choisie dans les paramètres." />
+      <StackPanel Orientation="Horizontal" Spacing="8">
+        <Button Content="Ajouter…" Click="OnAddClicked" />
+        <Button Content="Modifier…" Click="OnEditClicked" />
+        <Button Content="Supprimer" Click="OnDeleteClicked" />
+        <Button Content="Paramètres…" Click="OnSettingsClicked" />
+      </StackPanel>
+    </DockPanel>
+
+    <TextBlock DockPanel.Dock="Bottom" x:Name="StatusBar" Opacity="0.7" Margin="0,10,0,0" />
+
+    <ListBox x:Name="ScheduleList">
+      <ListBox.ItemTemplate>
+        <DataTemplate>
+          <Grid ColumnDefinitions="150,70,*,80" Margin="4">
+            <TextBlock Grid.Column="0" Text="{Binding Name}" FontWeight="SemiBold" />
+            <TextBlock Grid.Column="1" Text="{Binding TimeLabel}" />
+            <TextBlock Grid.Column="2" Text="{Binding DaysSummary}" Opacity="0.8" />
+            <TextBlock Grid.Column="3" Text="{Binding StatusLabel}" />
+          </Grid>
+        </DataTemplate>
+      </ListBox.ItemTemplate>
+    </ListBox>
+
+  </DockPanel>
+</Window>

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8C06D117-ED4F-47AE-BF3E-544D86E3C972}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SonoSonnette.Core", "src\SonoSonnette.Core\SonoSonnette.Core.csproj", "{D62ECAAE-2D0E-4E55-85AC-96C6C7D68502}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SonoSonnette.App", "src\SonoSonnette.App\SonoSonnette.App.csproj", "{3E544E5A-CEA6-4801-91E2-CD0D2BD4A491}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D62ECAAE-2D0E-4E55-85AC-96C6C7D68502}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D62ECAAE-2D0E-4E55-85AC-96C6C7D68502}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D62ECAAE-2D0E-4E55-85AC-96C6C7D68502}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D62ECAAE-2D0E-4E55-85AC-96C6C7D68502}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E544E5A-CEA6-4801-91E2-CD0D2BD4A491}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E544E5A-CEA6-4801-91E2-CD0D2BD4A491}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E544E5A-CEA6-4801-91E2-CD0D2BD4A491}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E544E5A-CEA6-4801-91E2-CD0D2BD4A491}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D62ECAAE-2D0E-4E55-85AC-96C6C7D68502} = {8C06D117-ED4F-47AE-BF3E-544D86E3C972}
+		{3E544E5A-CEA6-4801-91E2-CD0D2BD4A491} = {8C06D117-ED4F-47AE-BF3E-544D86E3C972}
+	EndGlobalSection
+EndGlobal
